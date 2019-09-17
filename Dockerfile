@@ -6,6 +6,9 @@ FROM python:alpine
 ENV SCOUTSUITE_VERSION=5.3.3
 
 RUN true \
+	&& echo $RELEASE
+	
+RUN true \
 	&& apk add \
 		--no-cache \
 		--virtual .deps \
