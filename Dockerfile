@@ -3,6 +3,7 @@ FROM opendevsecops/launcher:latest as launcher
 # ---
 
 FROM python:alpine
+ENV SCOUTSUITE_VERSION=5.1.0
 
 RUN true \
 	&& apk add \
@@ -13,7 +14,7 @@ RUN true \
 		libffi-dev openssl-dev
 
 RUN true \
-	&& pip install scoutsuite
+	&& pip install scoutsuite==${SCOUTSUITE_VERSION}
 
 RUN true \
 	&& apk del .deps
