@@ -3,7 +3,7 @@ FROM opendevsecops/launcher:latest as launcher
 # ---
 
 FROM python:alpine
-ENV SCOUTSUITE_VERSION=5.1.0
+ENV SCOUTSUITE_VERSION=5.2.0
 
 RUN true \
 	&& apk add \
